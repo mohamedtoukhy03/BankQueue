@@ -3,16 +3,9 @@ package bank.customers;
 import javax.swing.*;
 import java.awt.*;
 import java.time.LocalTime;
-import bank.services.ClientsService;
-import bank.services.TellerServices;
 
 public class CustomerGuiOut {
-    private final TellerServices tellerService;
-    private final ClientsService clientService;
-
     public CustomerGuiOut() {
-        tellerService = new TellerServices() {};
-        clientService = new ClientsService() {};
         createGUI();
     }
 

@@ -2,16 +2,8 @@ package bank.customers;
 
 import javax.swing.*;
 import java.awt.*;
-import bank.services.ClientsService;
-import bank.services.TellerServices;
-
 public class CustomerGuiIn {
-    private final TellerServices tellerService;
-    private final ClientsService clientService;
-
     public CustomerGuiIn() {
-        tellerService = new TellerServices() {};
-        clientService = new ClientsService() {};
         createGUI();
     }
 

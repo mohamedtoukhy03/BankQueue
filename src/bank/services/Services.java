@@ -4,18 +4,11 @@ import bank.systemOfTickets.TicketsManagement;
 
 public class Services {
     private int employeeNumber;
-    public boolean requestForAnotherCustomer(int employeeNumber, Services service) {
-        Tickets ticket = TicketsManagement.displayTurn(service);
+
+    public boolean requestForAnotherCustomer(Screen screen) {
+        Tickets ticket = TicketsManagement.displayTurn(this);
         if (ticket != null) {
-                String output = String.format(
-                        "------------------------------%n" +
-                                "Employee Number: %d%n" +
-                                "Service: %s%n" +
-                                "Ticket: %s%n" +
-                                "------------------------------",
-                        employeeNumber, service, ticket
-                );
-                System.out.println(output);
+                screen.print(employeeNumber, this, ticket);
                 return true;
         }
         return false;

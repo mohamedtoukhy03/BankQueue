@@ -11,7 +11,6 @@ public final class AvailableTimes {
     private static final List<LocalTime> availableTimes = new ArrayList<>();
 
     static {
-        // Initialize available times once.
         for (int minutes = 9 * 60; minutes <= 14 * 60; minutes += 30) {
             int hour = minutes / 60;
             int minute = minutes % 60;

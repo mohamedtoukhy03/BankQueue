@@ -20,7 +20,6 @@ public class TestProgram {
             SwingUtilities.invokeLater(() -> {
                 TellerServices tellerService = new TellerServices() {};
                 ClientsService clientService = new ClientsService() {};
-                new CustomerGuiOut();
                 new TellerServiceGui(tellerService);
                 new ClientServiceGui(clientService);
             });

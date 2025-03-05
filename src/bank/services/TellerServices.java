@@ -3,10 +3,12 @@ package bank.services;
 public class TellerServices extends Services {
     private static final String name = "TellerService";
     private static int tellerServiceEmployees;
+    Screen screen;
 
     public TellerServices(){
+        screen = new Screen();
         tellerServiceEmployees++;
-        setEmployeeNumber(tellerServiceEmployees);
+        super.setEmployeeNumber(tellerServiceEmployees);
     }
 
 

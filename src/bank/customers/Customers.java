@@ -7,8 +7,6 @@ import java.time.LocalTime;
 
 public class Customers {
     private Tickets ticket;
-
-
     public Customers(char service, LocalTime time){
         this.ticket = TicketsManagement.addTickets(service, time);
     }
@@ -17,9 +15,11 @@ public class Customers {
         this.ticket = TicketsManagement.addTickets(service);
 
     }
-
     public Tickets getTicket() {
         return ticket;
+    }
+    public void setTicket(Tickets ticket){
+        this.ticket = ticket;
     }
 
 }
